@@ -17,5 +17,10 @@
     "limited"
   ],
   "author": "Tyler Murphy <tylermurphyj@gmail.com>",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Tyler-Murphy/capped-map"
+  },
+  "bugs": "https://github.com/Tyler-Murphy/capped-map/issues"
 }
