@@ -1,0 +1,21 @@
+{
+  "name": "capped_map",
+  "version": "1.0.0",
+  "description": "es6 Maps with a maximum size. When the maximum size is reached, the oldest entries are deleted first.",
+  "main": "capped_map.js",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "keywords": [
+    "es6",
+    "map",
+    "maximum",
+    "size",
+    "limit",
+    "cap",
+    "capped",
+    "limited"
+  ],
+  "author": "Tyler Murphy <tylermurphyj@gmail.com>",
+  "license": "ISC"
+}
