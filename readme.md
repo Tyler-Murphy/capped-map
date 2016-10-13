@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/Tyler-Murphy/capped-map.svg?branch=master)](https://travis-ci.org/Tyler-Murphy/capped-map)
+
 ### Install
 
 ```
