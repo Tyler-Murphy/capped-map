@@ -25,5 +25,8 @@
   "bugs": "https://github.com/Tyler-Murphy/capped-map/issues",
   "devDependencies": {
     "standard": "^12.0.1"
+  },
+  "engines": {
+    "node": ">=6.0"
   }
 }
