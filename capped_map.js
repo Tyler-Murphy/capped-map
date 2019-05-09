@@ -1,20 +1,20 @@
-class CappedMap extends Map {
-  constructor (maximumSize) {
-    super()
-    this.maximumSize = maximumSize
-  }
+module.exports = function wrap (map, maximumSize = Infinity) {
+  const prototype = Reflect.getPrototypeOf(map)
+  const existingSetMethodDescriptor = Reflect.getOwnPropertyDescriptor(map, 'set') || Reflect.getOwnPropertyDescriptor(prototype, 'set')
 
-  set (key, value) {
-    let result = super.set(key, value)
+  Reflect.defineProperty(map, 'set', Object.assign(existingSetMethodDescriptor, {
+    value: new Proxy(map.set, {
+      apply: function (defaultSet, map, args) {
+        const result = Reflect.apply(defaultSet, map, args)
 
-    if (this.size > this.maximumSize) {
-      this.delete(this.keys().next().value)
-    }
+        if (map.size > maximumSize) {
+          map.delete(map.keys().next().value)
+        }
 
-    return result
-  }
-}
+        return result
+      }
+    })
+  }))
 
-module.exports = {
-  CappedMap
+  return map
 }
