@@ -1,6 +1,6 @@
 {
   "name": "capped_map",
-  "version": "3.0.1",
+  "version": "3.0.2",
   "description": "es6 Maps with a maximum size. When the maximum size is reached, the oldest entries are deleted first.",
   "main": "capped_map.js",
   "scripts": {
